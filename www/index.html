@@ -1,0 +1,1891 @@
+<!DOCTYPE html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" 		content="DekhBhaai Meme Creator" />
+<meta name="Description" 	content="DekhBhaai Mem Creator" />
+<!--Favicon shortcut link-->
+
+<!--Declare page as mobile friendly -->
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0"/>
+<!-- Declare page as iDevice WebApp friendly -->
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<!-- iDevice WebApp Splash Screen, Regular Icon, iPhone, iPad, iPod Retina Icons -->
+
+<!-- Page Title -->
+<title>Dekh Bhai</title>
+
+<!-- Stylesheet Load -->
+<link href="styles/style.css"				rel="stylesheet" 	type="text/css">
+<link href="styles/framework-style.css" 	rel="stylesheet" 	type="text/css">
+<link href="styles/framework.css" 			rel="stylesheet" 	type="text/css">
+<link href="styles/icons.css"				rel="stylesheet" 	type="text/css">
+<link href="styles/retina.css" 				rel="stylesheet" 	type="text/css" 	media="only screen and (-webkit-min-device-pixel-ratio: 2)" />
+</head>
+<div class="js">
+<body onload="onDocLoad()">
+
+<div id="preloader"></div>
+
+
+<div class="navigation" style="top:0"> <a href="javascript:deleteData()" class="nav-item delete-nav" style="width:25%;">Delete</a> <a href="javascript:getImage()" class="nav-item upload-nav" style="width:25%;">Upload</a><a href="javascript:resetimage()" class="nav-item reset-nav" style="width:25%;">Reset</a> <a href="javascript:aboutImage()" id="displayText" class="nav-item about-nav" style="width:25%;">About</a> </div><div class="content" style="margin:0;text-align:center;background:blue"><center>
+
+<div id="toggleText" class="aboutstyle">
+
+	<h3 style="text-align:center;">Privacy Policies: Dekhbhaai.com<br />
+	=============================</h3>
+	<p>DekhBhaai.com is Fun & Entertainment site. We'd give service in custom photo design & content as per user choice, where ever you're in globally by simple online editing the images and text as per your choice, can be done in fraction of minutes to get lot of Memes. What are you waiting for go ahead and make most of FUN & Joy and plan to share now for all your friends in all top Social Networking sites & Smart phone applications in minutes to convey your feelings and joy with your friends and community people.,</p>
+	<h3>Disclaimer:</h3>
+	<p>We are not responsible for text & images shared by user from our site, as it being custom and user editing so we'd not responsible for any kind of pattern and copy right issue. If anyone found any copied content or images, please let us know and we'd ready to remove and take the request as priority, if found any contents & images duplicate, we will remove it immediately.</p>
+	<p>The characters & images portrayed with the names used here in our website are fictitious and any resemblance to the names, character or history of any kind of person is coincidental and un-intentional.</p>
+	<p style="margin-bottom: 40px;">Our service is not to hurt anyone in the society, it's just meant for FUN and entertainment. If you found any bad, odd or abusive words or images, please feel free to contact us and send your ID proof, and we'd remove the image or content as early as possible.</p>
+	
+</div>
+
+<canvas id="c" width="360" height="500" >
+</canvas>
+</center>
+</div>
+<div class="navigation" id="text" style="bottom: 50px; height: auto; padding: 10px; color: rgb(255, 255, 255); border-width: 1px 1px 3px; border-style: solid; border-color: rgba(0, 0, 0, 0.498039); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; -webkit-box-shadow: rgba(0, 0, 0, 0.498039) 0px 2px 8px, rgba(255, 255, 255, 0.298039) 0px 1px inset, rgba(255, 255, 255, 0.2) 0px 10px inset, rgba(255, 255, 255, 0.247059) 0px 10px 20px inset, rgba(0, 0, 0, 0.298039) 0px -15px 30px inset; box-shadow: rgba(0, 0, 0, 0.498039) 0px 2px 8px, rgba(255, 255, 255, 0.298039) 0px 1px inset, rgba(255, 255, 255, 0.2) 0px 10px inset, rgba(255, 255, 255, 0.247059) 0px 10px 20px inset, rgba(0, 0, 0, 0.298039) 0px -15px 30px inset; background: rgba(0, 0, 0, 0.247059);display:none;">
+  
+  <div class="one-half" style="width:92.5%">
+    
+    <label for="First Line" style="color:#FFF;font-weight:bold;">
+      First Line
+    </label>
+    
+    <input type="text" name="name" id="ftext" class="contactField" onKeyUp="LineOneText(this)" style="color:white;" >
+    
+  </div>
+  
+  <div class="one-half">
+    
+  </div>
+  
+  <div class="one-half" style="width:92.5%;">
+    
+    <label for="Second Line" style="color:#FFF;">
+      Second Line
+    </label>
+    
+    <textarea name="name" id="stext" class="contactField" onKeyUp="LineTwoText(this)" style="font-family: 'Open Sans',sans-serif;color:#fff;padding-top:6px">
+    </textarea>
+    
+  </div>
+</div>
+<div class="navigation" id="smiley_menu" style="bottom: 240px;height:150px; background-color: #1c1cd9; padding-top:0;padding-bottom:20px;display:none;max-height:50px;">
+<div class="smiley-tab">
+      
+      <a class="show active_stickers" target="1">
+        Smiley1
+      </a> 
+      <a class="show" target="2">
+        Smiley2
+      </a>
+      <a class="show" target="4">
+        Characters
+      </a>
+    </div>
+</div>
+<div class="navigation" id="smiley" style="bottom: 50px;height:auto;background:none;background-color:#000;padding-top:0;padding-bottom:20px;display:none;max-height:200px;overflow:scroll;">
+  
+  <div class="tab" id="main">
+    
+    <div id="div1" class="targetDiv">
+        <div class="one-third">
+            <a><img src="images/smiley/png/bakudi.png" width="50" /></a>
+        </div>
+        <div class="one-third">
+            <a><img src="images/smiley/png/bey-yaar-100px.png" width="50" /></a>
+        </div>
+        <div class="one-third">
+            <a><img src="images/smiley/png/bhuro.png" width="50" /></a>
+        </div>
+        <div class="one-third">
+            <a><img src="images/smiley/png/hair-yo.png" width="50" /></a>
+        </div>
+        <div class="one-third">
+            <a><img src="images/smiley/png/love-eyes.png" width="50" /></a>
+        </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/2.png" data-src="images/smiley/svg/2.svg" width="50" id="data_one_temp" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/20.png" data-src="images/smiley/svg/20.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/21.png" data-src="images/smiley/svg/21.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/22.png" data-src="images/smiley/svg/22.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/23.png" data-src="images/smiley/svg/23.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/24.png" data-src="images/smiley/svg/24.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/3.png" data-src="images/smiley/svg/3.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/4.png" data-src="images/smiley/svg/4.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/5.png" data-src="images/smiley/svg/5.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/6.png" data-src="images/smiley/svg/6.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/7.png" data-src="images/smiley/svg/7.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/8.png" data-src="images/smiley/svg/8.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/9.png" data-src="images/smiley/svg/9.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/10.png" data-src="images/smiley/svg/10.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/11.png" data-src="images/smiley/svg/11.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/12.png" data-src="images/smiley/svg/12.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/13.png" data-src="images/smiley/svg/13.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/14.png" data-src="images/smiley/svg/14.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/15.png" data-src="images/smiley/svg/15.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/16.png" data-src="images/smiley/svg/16.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/17.png" data-src="images/smiley/svg/17.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/18.png" data-src="images/smiley/svg/18.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/19.png" data-src="images/smiley/svg/19.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/1.png" data-src="images/smiley/svg/1.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/25.png" data-src="images/smiley/svg/25.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/26.png" data-src="images/smiley/svg/26.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/27.png" data-src="images/smiley/svg/27.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/28.png" data-src="images/smiley/svg/28.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/29.png" data-src="images/smiley/svg/29.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/30.png" data-src="images/smiley/svg/30.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/31.png" data-src="images/smiley/svg/31.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/32.png" data-src="images/smiley/svg/32.svg" width="50" />
+        </a>
+        
+      </div>
+      
+    </div>
+    
+    <div id="div2" class="targetDiv" style="display:none;">
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/33.png" data-src="images/smiley/svg/33.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/34.png" data-src="images/smiley/svg/34.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/35.png" data-src="images/smiley/svg/35.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/36.png" data-src="images/smiley/svg/36.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/37.png" data-src="images/smiley/svg/37.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/38.png" data-src="images/smiley/svg/38.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/39.png" data-src="images/smiley/svg/39.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/40.png" data-src="images/smiley/svg/40.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/41.png" data-src="images/smiley/svg/41.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/42.png" data-src="images/smiley/svg/42.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/43.png" data-src="images/smiley/svg/43.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/44.png" data-src="images/smiley/svg/44.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/45.png" data-src="images/smiley/svg/45.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/46.png" data-src="images/smiley/svg/46.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/47.png" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/48.png" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/49.png" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/50.png" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/51.png" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/52.png" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/53.png" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/54.png" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/55.png" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/56.png" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/57.png" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/58.png" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/59.png" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/60.png" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/61.png" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/62.png" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/63.png" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/64.png" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/65.png" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/66.png" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/67.png" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/68.png" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/69.png" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/70.png" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/71.png" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/72.png" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/73.png" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/74.png" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/75.png" data-src="images/smiley/svg/75.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/76.png" data-src="images/smiley/svg/76.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/77.png" data-src="images/smiley/svg/77.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/78.png" data-src="images/smiley/svg/78.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/79.png" data-src="images/smiley/svg/79.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/80.png" data-src="images/smiley/svg/80.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/81.png" data-src="images/smiley/svg/81.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/82.png" data-src="images/smiley/svg/82.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/83.png" data-src="images/smiley/svg/83.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/84.png" data-src="images/smiley/svg/84.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/85.png" data-src="images/smiley/svg/85.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/86.png" data-src="images/smiley/svg/86.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/87.png" data-src="images/smiley/svg/87.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/88.png" data-src="images/smiley/svg/88.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/89.png" data-src="images/smiley/svg/89.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/90.png" data-src="images/smiley/svg/90.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/91.png" data-src="images/smiley/svg/91.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/92.png" data-src="images/smiley/svg/92.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/93.png" data-src="images/smiley/svg/93.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/94.png" data-src="images/smiley/svg/94.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/95.png" data-src="images/smiley/svg/95.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/96.png" data-src="images/smiley/svg/96.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/97.png" data-src="images/smiley/svg/97.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/98.png" data-src="images/smiley/svg/98.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/99.png" data-src="images/smiley/svg/99.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/100.png" data-src="images/smiley/svg/100.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/101.png" data-src="images/smiley/svg/101.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third" style="display:none;">
+        
+        <a>
+          <img src="images/smiley/png/103.png" data-src="images/smiley/svg/103.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/104.png" data-src="images/smiley/svg/104.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/105.png" data-src="images/smiley/svg/105.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/106.png" data-src="images/smiley/svg/106.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/107.png" data-src="images/smiley/svg/107.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/108.png" data-src="images/smiley/svg/108.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/109.png" data-src="images/smiley/svg/109.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/110.png" data-src="images/smiley/svg/110.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/111.png" data-src="images/smiley/svg/111.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/112.png" data-src="images/smiley/svg/112.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/113.png" data-src="images/smiley/svg/113.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/114.png" data-src="images/smiley/svg/114.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/115.png" data-src="images/smiley/svg/115.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/116.png" data-src="images/smiley/svg/116.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/117.png" data-src="images/smiley/svg/117.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/118.png" data-src="images/smiley/svg/118.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/119.png" data-src="images/smiley/svg/119.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/120.png" data-src="images/smiley/svg/120.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/121.png" data-src="images/smiley/svg/121.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/122.png" data-src="images/smiley/svg/122.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/123.png" data-src="images/smiley/svg/123.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/124.png" data-src="images/smiley/svg/124.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/125.png" data-src="images/smiley/svg/125.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/126.png" data-src="images/smiley/svg/126.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/127.png" data-src="images/smiley/svg/127.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/128.png" data-src="images/smiley/svg/128.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/129.png" data-src="images/smiley/svg/129.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/130.png" data-src="images/smiley/svg/130.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/131.png" data-src="images/smiley/svg/131.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/132.png" data-src="images/smiley/svg/132.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/133.png" data-src="images/smiley/svg/133.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/134.png" data-src="images/smiley/svg/134.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/135.png" data-src="images/smiley/svg/135.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/136.png" data-src="images/smiley/svg/136.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/137.png" data-src="images/smiley/svg/137.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/138.png" data-src="images/smiley/svg/138.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/139.png" data-src="images/smiley/svg/139.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/140.png" data-src="images/smiley/svg/140.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/141.png" data-src="images/smiley/svg/141.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/142.png" data-src="images/smiley/svg/142.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/smiley/png/143.png" width="50" />
+        </a>
+        
+      </div>
+      
+    </div>
+    
+    <div id="div3" class="targetDiv bg_white" style="display:none;">
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/meme/png/1.png" data-src="images/meme/svg/1.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/meme/png/2.png" data-src="images/meme/svg/2.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/meme/png/3.png" data-src="images/meme/svg/3.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/meme/png/5.png" data-src="images/meme/svg/5.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/meme/png/6.png" data-src="images/meme/svg/6.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/meme/png/7.png" data-src="images/meme/svg/7.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/meme/png/8.png" data-src="images/meme/svg/8.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/meme/png/9.png" data-src="images/meme/svg/9.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/meme/png/10.png" data-src="images/meme/svg/10.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/meme/png/14.png" data-src="images/meme/svg/14.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/meme/png/15.png" data-src="images/meme/svg/15.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/meme/png/17.png" data-src="images/meme/svg/17.svg" width="50" />
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img src="images/meme/png/18.png" data-src="images/meme/svg/18.svg" width="50" />
+        </a>
+        
+      </div>
+      
+    </div>
+    
+    <div id="div4" class="targetDiv" style="display:none;">
+      
+      <div class="one-third">
+        
+        <a>
+          <img height="60" src="images/characters/png/1.png">
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img height="60" src="images/characters/png/2.png">
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img height="60" src="images/characters/png/3.png">
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img height="60" src="images/characters/png/4.png">
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img height="60" src="images/characters/png/5.png">
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img height="60" src="images/characters/png/6.png">
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img height="60" src="images/characters/png/7.png">
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img height="60" src="images/characters/png/8.png">
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img height="60" src="images/characters/png/9.png">
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img height="55" src="images/characters/png/10.png" data-src="images/characters/png/10.svg">
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img height="60" src="images/characters/png/11.png">
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img height="60" src="images/characters/png/12.png">
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img height="60" src="images/characters/png/13.png">
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img height="60" src="images/characters/png/14.png">
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img height="60" src="images/characters/png/15.png">
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img height="60" src="images/characters/png/16.png">
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img height="60" src="images/characters/png/17.png">
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img height="60" src="images/characters/png/18.png">
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img height="60" src="images/characters/png/19.png">
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img height="60" src="images/characters/png/20.png">
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img height="60" src="images/characters/png/21.png">
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img height="60" src="images/characters/png/22.png">
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img height="60" src="images/characters/png/24.png">
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img height="60" src="images/characters/png/25.png">
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img height="60" src="images/characters/png/26.png">
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img height="60" src="images/characters/png/27.png">
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img height="60" src="images/characters/png/28.png">
+        </a>
+        
+      </div>
+      
+      <div class="one-third">
+        
+        <a>
+          <img height="60" src="images/characters/png/29.png">
+        </a>
+        
+      </div>
+    </div>
+    
+  </div>
+  
+</div>
+</div>
+<div class="navigation" id="colors" style="bottom: 50px;height: auto;padding: 10px;color: rgb(255, 255, 255);border-width: 1px 1px 3px;border-style: solid;
+border-color: rgba(0, 0, 0, 0.498039); border-top-left-radius: 3px;border-top-right-radius: 3px;border-bottom-right-radius: 3px;border-bottom-left-radius: 3px;-webkit-box-shadow: rgba(0, 0, 0, 0.498039) 0px 2px 8px, rgba(255, 255, 255, 0.298039) 0px 1px inset, rgba(255, 255, 255, 0.2) 0px 10px inset, rgba(255, 255, 255, 0.247059) 0px 10px 20px inset, rgba(0, 0, 0, 0.298039) 0px -15px 30px inset;box-shadow: rgba(0, 0, 0, 0.498039) 0px 2px 8px, rgba(255, 255, 255, 0.298039) 0px 1px inset, rgba(255, 255, 255, 0.2) 0px 10px inset, rgba(255, 255, 255, 0.247059) 0px 10px 20px inset, rgba(0, 0, 0, 0.298039) 0px -15px 30px inset;display: block;background: rgba(0, 0, 0, 0.247059);display:none;">
+  
+  <div class="Column" style="text-align:center;">
+    
+    <a href="#" id="btn1" class="btn btn-primary active_btn">
+      Background
+    </a>
+    
+    <a href="#" id="btn2" class="btn btn-primary">
+      Text
+    </a>
+    
+  </div>
+  
+  <div class="column text" style="padding-top:10px;">
+    
+    <p>
+      
+      <div class="text_bg">
+    </div>
+    
+    <div class="text_bg" style="background-color:#f3d353;">
+    </div>
+    
+    <div class="text_bg" style="background-color:#d35a49;">
+    </div>
+    
+    <div class="text_bg" style="background-color:#9ad349;">
+    </div>
+    
+    <div class="text_bg" style="background-color:#49d3aa;">
+    </div>
+    
+    <div class="text_bg" style="background-color:#498dd3;">
+    </div>
+    
+    <div class="text_bg" style="background-color:#4956d3;">
+    </div>
+    
+    <div class="text_bg" style="background-color:#be49d3;">
+    </div>
+    
+  </p>
+  
+  <p>
+    
+    <div class="text_bg" style="background-color:#D34983;">
+  </div>
+  
+  <div class="text_bg" style="background-color:#716EE8;">
+  </div>
+  
+  <div class="text_bg" style="background-color:#50BFD3;">
+  </div>
+  
+  <div class="text_bg" style="background-color:#2DCE71;">
+  </div>
+  
+  <div class="text_bg" style="background-color:#E6AD1E;">
+  </div>
+  
+  <div class="text_bg" style="background-color:#9B31CC;">
+  </div>
+  
+  <div class="text_bg" style="background-color:#F3BC53;">
+  </div>
+  
+  <div class="text_bg" style="background-color:#00FF00;">
+  </div>
+  
+  <div class="text_bg" style="background-color:#FF0000;">
+  </div>
+  
+  <div class="text_bg" style="background-color:#0000FF;">
+  </div>
+  
+  <div class="text_bg" style="background-color:#FFFF00;">
+  </div>
+  
+  <div class="text_bg" style="background-color:#00FFFF;">
+  </div>
+  
+  <div class="text_bg" style="background-color:#FF00FF;">
+  </div>
+  
+  <div class="text_bg" style="background-color:#000000;">
+  </div>
+  
+</p>
+
+</div>
+
+<div class="column">
+  
+  <div class="one-half">
+    
+    <input class="color" id="color_paletter1" readonly style="width:99%;border: none; padding: 5px 0;background-color:#f3d353;" onChange="changeColor1(this)" />
+    
+  </div>
+  
+  <div class="bg_select_code one-half">
+    
+    <input type="text" id="numbercolor" value="#f3d353" style="padding:5px 0;" onKeyUp="keyupChangeColor1()" />
+    
+  </div>
+  
+</div>
+</div>
+<div class="navigation">
+  
+  <a href="javascript:text(this)" id="text_link"class="nav-item home-nav">
+    Text
+  </a>
+  
+  <a href="javascript:smiley(this)" id="smiley_link" class="nav-item about-nav">
+    Smiley
+  </a>
+  
+  <a href="javascript:colors(this)" id="colors_link" class="nav-item gallery-nav">
+    Colors
+  </a>
+  
+  <a href="javascript:share_data()" class="nav-item blog-nav">
+    Share
+  </a>
+  
+  <a onclick="downloadCanvas()" class="nav-item mail-nav">
+    Save
+  </a>
+  
+</div>
+<script src="js/jquery-2.1.0.min.js">
+</script>
+
+<script src="cordova.js">
+</script>
+<script type="text/javascript" src="jpeg_encoder_basic.js">
+</script>
+<script type="text/javascript" charset="utf-8" src="SocialSharing.js">
+</script>
+
+<script type="text/javascript" charset="utf-8" src="Canvas2ImagePlugin.js">
+</script>
+
+<script src="js/prism.js">
+</script>
+
+<script src="js/fabric.js">
+</script>
+
+<script src="js/master.js">
+</script>
+
+<script type="text/javascript" src="js/vinus.js">
+</script>
+
+<script type="text/javascript" src="js/jscolor.js">
+</script>
+
+<script>
+
+ function onDocLoad() {
+if(( /(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent) )) {
+document.addEventListener('deviceready', initApp, false);
+} else {
+initApp();
+}
+}
+function initApp() {
+initAd();
+// display the banner at startup
+window.plugins.AdMob.createBannerView();
+}
+function initAd(){
+if ( window.plugins && window.plugins.AdMob ) {
+var ad_units = {
+
+android : {
+banner: 'ca-app-pub-9999828043873612/8533932087',
+
+}
+};
+var admobid = "";
+if( /(android)/i.test(navigator.userAgent) ) {
+admobid = ad_units.android;
+} else if(/(iphone|ipad)/i.test(navigator.userAgent)) {
+admobid = ad_units.ios;
+} else {
+admobid = ad_units.wp8;
+}
+window.plugins.AdMob.setOptions( {
+publisherId: admobid.banner,
+interstitialAdId: admobid.interstitial,
+bannerAtTop: false, // set to true, to put banner at top
+overlap: false, // set to true, to allow banner overlap webview
+offsetTopBar: false, // set to true to avoid ios7 status bar overlap
+isTesting: false, // receiving test ad
+autoShow: true // auto show interstitial ad when loaded
+});
+registerAdEvents();
+} else {
+alert( 'admob plugin not ready' );
+}
+}
+// optional, in case respond to events
+function registerAdEvents() {
+document.addEventListener('onReceiveAd', function(){});
+document.addEventListener('onFailedToReceiveAd', function(data){});
+document.addEventListener('onPresentAd', function(){});
+document.addEventListener('onDismissAd', function(){ });
+document.addEventListener('onLeaveToAd', function(){ });
+document.addEventListener('onReceiveInterstitialAd', function(){ });
+document.addEventListener('onPresentInterstitialAd', function(){ });
+document.addEventListener('onDismissInterstitialAd', function(){ });
+}
+function onResize() {
+var msg = 'web view: ' + window.innerWidth + ' x ' + window.innerHeight;
+document.getElementById('sizeinfo').innerHTML = msg;
+}
+ 
+  $('.upper-canvas').click(function(e){
+    removeall();
+  }
+                          );
+  $('.show').click(function () {
+    $('.targetDiv').hide();
+    $('#div' + $(this).attr('target')).show();
+    $(".show").removeClass("active_stickers");
+    $(this).addClass("active_stickers");
+  }
+                  );
+  function removeall(){
+    $('#smiley').hide();
+	$('#smiley_menu').hide();
+    $('#smiley_link').removeClass('active-nav');
+    $('#colors').hide();
+    $('#colors_link').removeClass('active-nav');
+    $('#text').hide();
+    $('#text_link').removeClass('active-nav');
+  }function text(a){
+    $('#smiley').hide();
+	$('#smiley_menu').hide();
+    $('#smiley_link').removeClass('active-nav');
+    $('#colors').hide();
+    $('#colors_link').removeClass('active-nav');
+    if($('#text_link').hasClass('active-nav')){
+      $('#text').hide();
+      $('#text_link').removeClass('active-nav');
+    }else{
+      $('#text').show();
+      $('#text_link').addClass('active-nav');
+    }}
+  function smiley(a){
+    $('#text').hide();
+    $('#text_link').removeClass('active-nav');
+    $('#colors').hide();
+    $('#colors_link').removeClass('active-nav');
+    if($('#smiley_link').hasClass('active-nav')){
+      $('#smiley').hide();
+	  $('#smiley_menu').hide();
+      $('#smiley_link').removeClass('active-nav');
+    }else{
+      $('#smiley').show();
+	  $('#smiley_menu').show();
+      $('#smiley_link').addClass('active-nav');
+    }}
+  function colors(a){
+    $('#text').hide();
+    $('#text_link').removeClass('active-nav');
+    $('#smiley').hide();
+	$('#smiley_menu').hide();
+    $('#smiley_link').removeClass('active-nav');
+    if($('#colors_link').hasClass('active-nav')){
+      $('#colors').hide();
+      $('#colors_link').removeClass('active-nav');
+    }else{
+      $('#colors').show();
+      $('#colors_link').addClass('active-nav');
+    }}
+  document.addEventListener("deviceready", onDeviceReady, false);
+
+	function onDeviceReady() {
+	    document.addEventListener("backbutton", onBackKeyDown, false); //Listen to the User clicking on the back button
+		
+	}
+	
+	function onBackKeyDown(e) {
+	    e.preventDefault();
+	    navigator.notification.confirm("Are you sure you want to exit ?", onConfirm, "Confirmation", "Yes,No"); 
+	    // Prompt the user with the choice
+	}
+	
+	function onConfirm(button) {
+	    if(button==2){//If User selected No, then we just do nothing
+	        return;
+	    }else{
+	        navigator.app.exitApp();// Otherwise we quit the app.
+	    }
+	}</script></body></div></html>
